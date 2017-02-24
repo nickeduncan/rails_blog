@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
+  post 'articles/new' => 'articles#create'
+  
   resources :articles do
     resources :comments
   end
